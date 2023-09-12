@@ -12,7 +12,7 @@ public class Repository {
     private EntityManager entityManager;
 
     public List<String> getProductName(String name) {
-        Query query = entityManager.createQuery("select o.product_name from Orders o join o.customers c WHERE c.name = :name", String.class);
+        Query query = entityManager.createQuery("select o.productName from Orders o join o.customers c WHERE c.name = :name", String.class);
         query.setParameter("name", name);
         List<String> productNameList = query.getResultList();
         return productNameList;
