@@ -10,23 +10,26 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@IdClass(CustomersId.class)
 @Table(name = "customers")
 public class Customers {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Id
     @Column(nullable = false)
     private String name;
 
+    @Id
     @Column(nullable = false)
     private String surname;
 
+    @Id
     @Column(nullable = false)
     private int age;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "phone_number")
     private String phoneNumber;
 
     @OneToMany(cascade = CascadeType.ALL)

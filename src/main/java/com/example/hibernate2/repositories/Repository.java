@@ -3,12 +3,11 @@ package com.example.hibernate2.repositories;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public class ProductRepository {
+@org.springframework.stereotype.Repository
+public class Repository {
     @PersistenceContext
     private EntityManager entityManager;
 

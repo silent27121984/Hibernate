@@ -1,6 +1,6 @@
 package com.example.hibernate2.controllers;
 
-import com.example.hibernate2.services.ProductService;
+import com.example.hibernate2.services.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class ProductController {
+public class Controller {
 
-    private final ProductService productService;
+    private final Service productService;
 
-    public ProductController(ProductService productService) {
+    public Controller(Service productService) {
         this.productService = productService;
     }
 

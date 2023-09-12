@@ -13,8 +13,9 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@IdClass(OrdersId.class)
 @Table(name = "orders")
-public class Orders {
+public class Orders{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +28,8 @@ public class Orders {
     @JoinColumn(name = "customer_id")
     Customers customers;
 
-    @Column(nullable = false)
-    private String product_name;
+    @Column(nullable = false, name = "product_name")
+    private String productName;
 
     @Column(nullable = false)
     private int amount;
