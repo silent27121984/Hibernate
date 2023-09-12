@@ -4,11 +4,10 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import com.example.hibernate.entity.Person;
 import jakarta.transaction.Transactional;
-import lombok.AllArgsConstructor;
 
 import java.util.List;
 
-@AllArgsConstructor
+
 @org.springframework.stereotype.Repository
 public class Repository {
 

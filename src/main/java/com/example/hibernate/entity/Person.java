@@ -13,7 +13,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "persons")
-@Entity
 public class Person implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,8 +24,8 @@ public class Person implements Serializable {
     private String surname;
     @Column(nullable = false)
     private int age;
-    @Column(nullable = false)
-    private int phone_number;
-    @Column(nullable = false)
-    private String city_of_living;
+    @Column(nullable = false, name = "phone_number")
+    private int phoneNumber;
+    @Column(nullable = false, name = "city_of_living")
+    private String cityOfLiving;
 }
