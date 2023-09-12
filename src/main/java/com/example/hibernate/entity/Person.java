@@ -12,16 +12,23 @@ import java.io.Serializable;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@IdClass(PersonId.class)
 @Table(name = "persons")
-public class Person implements Serializable {
+public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Id
     @Column(nullable = false)
     private String name;
+
+    @Id
     @Column(nullable = false)
     private String surname;
+
+    @Id
     @Column(nullable = false)
     private int age;
     @Column(nullable = false, name = "phone_number")
