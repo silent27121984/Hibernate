@@ -16,11 +16,6 @@ import java.util.Date;
 @IdClass(OrdersId.class)
 @Table(name = "orders")
 public class Orders{
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
     @Column
     private Date date;
 
@@ -28,6 +23,7 @@ public class Orders{
     @JoinColumn(name = "customer_id")
     Customers customers;
 
+    @Id
     @Column(nullable = false, name = "product_name")
     private String productName;
 

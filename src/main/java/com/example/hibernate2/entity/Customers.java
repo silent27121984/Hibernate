@@ -14,10 +14,6 @@ import java.util.List;
 @Table(name = "customers")
 public class Customers {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
-    @Id
     @Column(nullable = false)
     private String name;
 

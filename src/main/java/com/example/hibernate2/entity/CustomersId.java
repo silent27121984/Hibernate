@@ -12,7 +12,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CustomersId implements Serializable {
-    private int id;
     private String name;
     private String surname;
     private int age;

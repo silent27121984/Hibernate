@@ -12,5 +12,5 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrdersId implements Serializable{
-    private int id;
+    private String productName;
 }
