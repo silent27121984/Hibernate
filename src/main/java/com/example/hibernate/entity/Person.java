@@ -17,10 +17,6 @@ import java.io.Serializable;
 @Table(name = "persons")
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-
-    @Id
     @Column(nullable = false)
     private String name;
 
